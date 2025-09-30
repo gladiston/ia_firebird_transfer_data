@@ -3,6 +3,14 @@ Usando IA para criar script psql do Firebird para transferir dados de uma base d
 Uma instrução completa de como fazer isso, segue abaixo.
 Se você usa DOMAINs, insira-os no passo 2, se forem muitos anexe num .md separado todos os domains que usa e seus tipos(não precisa das constraints neles) como mostrado no passo.  
 
+# Objetivo  
+O objetivo é fazer transferencia de dados de uma tabela para outra incluindo databases diferentes.
+
+# Vantagens  
+As vantagens são: velocidade e flexibilidade.  
+A transferencia é muito mais rapida do que usando programas como FBCopy ou IBDataPump porque acontecem entre servidores sem nenhum midware entre eles.
+Também há flexibilidade, foi incluida uma variavel vPODE_TRANSF que permiti incluir IFs dentro do script para desviar um registro de ser transferido. Também cada campo do registro é transferido para uma variavel, por exemplo 'DESCRICAO' para 'vDESCRICAO', caso voce queira transformar o valor, basta modificar vDESCRICAO.
+
 <<-- INICIO DO PROMPT -->>
 
 1. Aqui vamos criar scripts .sql que transferem os arquivos de um servidor de banco de dados antigo para outro mais novo.
