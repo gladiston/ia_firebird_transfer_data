@@ -222,7 +222,8 @@ SET FIREBIRD_MSG=/opt/firebird
 SET ISC_USER=SYSDBA
 SET ISC_PASSWORD=masterkey
 ```  
-ou caso seja Linux:
+As variaveis de ambiente no Windows podem ser gerados no próprio Windows ao inves de ser no prompt como no exemplo acima, procure por 'Editar as variáveis de ambiente' e descobrirá.
+Se estiver usando Linux:
 ```
 export PATH=$PATH:/opt/firebird/bin
 export FIREBIRD_MSG=/opt/firebird
