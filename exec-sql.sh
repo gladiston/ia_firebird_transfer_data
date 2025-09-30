@@ -17,7 +17,7 @@ BASE_DIR="$HOME/projetos-db/database/database2025-scripts"
 ISQL_CMD="/opt/firebird/bin/isql"
 ISQL_PARAM=" -q "
 DB_FILE=database2025.fdb
-DB_CONN="localhost/8050:$DB_FILE"
+DB_CONN="localhost/3050:$DB_FILE"
 DB_PATH="/var/fdb"
 
 # Controle/UX
