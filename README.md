@@ -1,7 +1,8 @@
 # Criando scripts de transferencia de dados entre bancos Firebird
 Usando IA para criar script psql do Firebird para transferir dados de uma base de dados Firebird oara outra.
 Uma instrução completa de como fazer isso, segue abaixo.
-Se você usa DOMAINs, insira-os no passo 2, se forem muitos anexe num .md separado todos os domains que usa e seus tipos(não precisa das constraints neles) como mostrado no passo.
+Se você usa DOMAINs, insira-os no passo 2, se forem muitos anexe num .md separado todos os domains que usa e seus tipos(não precisa das constraints neles) como mostrado no passo.  
+
 <<-- INICIO DO PROMPT -->>
 
 1. Aqui vamos criar scripts .sql que transferem os arquivos de um servidor de banco de dados antigo para outro mais novo.
@@ -199,5 +200,6 @@ Isso ira facilitar caso eu queira criar outro IF mudando o valor de vPODE_TRANSF
 11. As variaveis que não forem referencias a campo de tabela devem estar no inicio do bloco.  
 12. Entre as linhas que declaram as variaveis não devem existir linhas em branco.  
 
-<<-- FIM DO PROMPT -->>
+<<-- FIM DO PROMPT -->>  
+
 13. Crie uma variavel vSKIP_HASDATA (no topo do bloco) do tipo BOOLEAN com valor inicial true. Quando este valor for true, confira se a tabela de destino possui dados e se existir simplesmente pule a transferencia. Manualmente poderei mudar para 'false' para forçar a transferencia.  
