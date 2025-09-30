@@ -38,7 +38,7 @@ CREATE TABLE ADMIN_CALENDARIO (
     end AS VARCHAR(30))
     ),
     LAST_UPDATE    TIMESTAMP DEFAULT current_timestamp NOT NULL,
-    LAST_OWNER     VARCHAR(32) DEFAULT CURRENT_USER NOT NULL,
+    LAST_OWNER     VARCHAR(32) DEFAULT current_user NOT NULL,
     MODIFICADO_EM  COMPUTED BY (
       cast(
         case
@@ -51,7 +51,7 @@ CREATE TABLE ADMIN_CALENDARIO (
 );
 ```
 
-2. Como pode ver no script 'CREATE TABLE' há domains que são tipos criados pelo proprio usuário que refereciam tipos primitivos e seus tamanhos. Leia o arquivo domains.md e saberá qual os tipos primitivos e seus tamanho para cada domain, ex:  
+2. Como pode ver no script 'CREATE TABLE' há domains que são tipos criados pelo proprio usuário que refereciam tipos primitivos e seus tamanhos. Leia o arquivo domains.md - neste repositorio tem um exemplo - e saberá qual os tipos primitivos e seus tamanho para cada domain, ex:  
 ```
   ID_CALENDARIO -> BINGINT
   LOGINNAME ->VARCHAR(32)
