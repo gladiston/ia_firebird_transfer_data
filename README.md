@@ -9,9 +9,9 @@ O objetivo é fazer transferencia de dados de uma tabela para outra incluindo da
 # Vantagens  
 As vantagens são: velocidade e flexibilidade.  
 A transferencia é muito mais rapida do que usando programas como FBCopy ou IBDataPump porque acontecem entre servidores sem nenhum midware entre eles.
-Também há flexibilidade, foi incluida uma variavel vPODE_TRANSF que permiti incluir IFs dentro do script para desviar um registro de ser transferido. Também cada campo do registro é transferido para uma variavel, por exemplo 'DESCRICAO' para 'vDESCRICAO', caso voce queira transformar o valor, basta modificar vDESCRICAO.  
+Também há flexibilidade, foi incluida uma variavel vPODE_TRANSF que permiti incluir IFs dentro do script para desviar um registro de ser transferido. Também cada campo do registro é transferido para uma variavel, por exemplo 'DESCRICAO' para 'vDESCRICAO', caso voce queira transformar o valor, basta modificar vDESCRICAO.   
 
-# INICIO DO PROMPT 
+# Inicio de prompt de I.A
 
 1. Aqui vamos criar scripts .sql que transferem os arquivos de um servidor de banco de dados antigo para outro mais novo.
 * Fornecido uma estrutura de tabela como o seguinte exemplo:
@@ -209,6 +209,6 @@ Isso ira facilitar caso eu queira criar outro IF mudando o valor de vPODE_TRANSF
 12. Entre as linhas que declaram as variaveis não devem existir linhas em branco.  
 13. Crie uma variavel vSKIP_HASDATA (no topo do bloco) do tipo BOOLEAN com valor inicial true. Quando este valor for true, confira se a tabela de destino possui dados e se existir simplesmente pule a transferencia. Manualmente poderei mudar para 'false' para forçar a transferencia.  
 
-# FIM DO PROMPT  
+# Fim de prompt de I.A
 
 É isso, faça bom uso.
