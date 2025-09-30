@@ -34,7 +34,7 @@ as
   declare vCountCompare   bigint;
   -- comparar com qual banco de dados, usuario, senha
   declare vDB_FROM_HOST     varchar(255) = 'localhost';
-  declare vDB_FROM_PORT     varchar(10)  = '8050';
+  declare vDB_FROM_PORT     varchar(10)  = '3050';
   declare vDB_FROM_DATABASE varchar(255) = 'fontedecomparacao.fdb';
   declare vDB_FROM_USERNAME varchar(63)  = 'SYSDBA';
   declare vDB_FROM_PASSWORD varchar(63)  = 'masterkey';
