@@ -199,7 +199,6 @@ SET TERM ; ^
 Isso ira facilitar caso eu queira criar outro IF mudando o valor de vPODE_TRANSF.  
 11. As variaveis que não forem referencias a campo de tabela devem estar no inicio do bloco.  
 12. Entre as linhas que declaram as variaveis não devem existir linhas em branco.  
+13. Crie uma variavel vSKIP_HASDATA (no topo do bloco) do tipo BOOLEAN com valor inicial true. Quando este valor for true, confira se a tabela de destino possui dados e se existir simplesmente pule a transferencia. Manualmente poderei mudar para 'false' para forçar a transferencia.  
 
 <<-- FIM DO PROMPT -->>  
-
-13. Crie uma variavel vSKIP_HASDATA (no topo do bloco) do tipo BOOLEAN com valor inicial true. Quando este valor for true, confira se a tabela de destino possui dados e se existir simplesmente pule a transferencia. Manualmente poderei mudar para 'false' para forçar a transferencia.  
