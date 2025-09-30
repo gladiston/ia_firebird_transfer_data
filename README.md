@@ -11,6 +11,9 @@ As vantagens são: velocidade e flexibilidade.
 A transferencia é muito mais rapida do que usando programas como FBCopy ou IBDataPump porque acontecem entre servidores sem nenhum midware entre eles.
 Também há flexibilidade, foi incluida uma variavel vPODE_TRANSF que permiti incluir IFs dentro do script para desviar um registro de ser transferido. Também cada campo do registro é transferido para uma variavel, por exemplo 'DESCRICAO' para 'vDESCRICAO', caso voce queira transformar o valor, basta modificar vDESCRICAO.   
 
+# Modo de usar  
+Simplesmente copie o trecho entre 'Inicio de prompt de I.A' e 'Fim de prompt de I.A' no prompt de sua IA prefererida como o chatgpt. Claro, voce deve acrescentar um arquivo de script contendo o CREATE TABLE para ele lhe gerar um de transferencia de dados baseado no que foi informado no prompt. Simples assim.
+
 # Inicio de prompt de I.A
 
 1. Aqui vamos criar scripts .sql que transferem os arquivos de um servidor de banco de dados antigo para outro mais novo.
