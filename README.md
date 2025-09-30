@@ -214,4 +214,35 @@ Isso ira facilitar caso eu queira criar outro IF mudando o valor de vPODE_TRANSF
 
 # Fim de prompt de I.A
 
-É isso, faça bom uso.
+# Como executar os scripts gerados pela I.A  
+Primeiro, sete as variaveis de ambiente para que não sejamos obrigados a informar usuário e senha todas as vezes:  
+```
+SET PATH=$PATH:/opt/firebird/bin
+SET FIREBIRD_MSG=/opt/firebird
+SET ISC_USER=SYSDBA
+SET ISC_PASSWORD=masterkey
+```  
+ou caso seja Linux:
+```
+export PATH=$PATH:/opt/firebird/bin
+export FIREBIRD_MSG=/opt/firebird
+export ISC_USER=SYSDBA
+export ISC_PASSWORD=masterkey
+```  
+E então executar o script assim:
+```
+isql -q "localhost/3050:c:\caminho\ou\alias\para\o\banco.fdb" -i "c:\caminho\para\o\script.sql"
+```  
+Neste repositório, deixei um script chamado 'exec-sql.sh' feito em bash-script para que voce possa executar vários scripts de uma unica vez, nele basta informar onde estão os script e ele executará todos, inclusive se houver dependencias entre eles, ele irá ajustar a ordem sozinho até que todos os scripts tenham sido executados com sucesso. A forma de usá-lo (SOMENTE NO LINUX) é:
+```
+exec-sql.sh <pasta_sql> [-v] [--pause] [--quiet] [--force <N>]
+```  
+Onde:
+```  
+O primeiro parâmetro é obrigatório (pasta contendo .sql) e depois:
+  --v : Verbose
+  --pause : Uma pausa a cada execução de script
+  --quiet : Modo silencioso
+  --force <N> : Por padrão, quando há falhas ele repete um loop até 3 vezes para detectar estagnação,
+                mas você pode mudar de 3 para outra quantidade de loops de verificação de estagnação
+```
