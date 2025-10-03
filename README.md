@@ -4,7 +4,7 @@ Uma instrução completa de como fazer isso, segue abaixo.
 Se você usa DOMAINs, insira-os no passo 2, se forem muitos anexe num .md separado todos os domains que usa e seus tipos(não precisa das constraints neles) como mostrado no passo.  
 
 # Objetivo  
-O objetivo é fazer transferencia de dados de uma tabela para outra incluindo databases diferentes.
+O objetivo é fazer transferencia de dados de uma tabela para outra e até mesmo entre databases diferentes, desde que tenham o mesmo charset para evitar erros de transliteração. Alguns charsets como o ISO8859_1 e WIN1252 apesar de diferentes, não tem problemas porque o segundo é basicamente uma cópia do primeiro com sutil diferença.
 
 # Vantagens  
 As vantagens são: velocidade e flexibilidade.  
